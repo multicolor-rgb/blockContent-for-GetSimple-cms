@@ -14,7 +14,10 @@
 <script src="https://cdn.jsdelivr.net/npm/editorjs-undo"></script>
 <script src="https://cdn.jsdelivr.net/npm/editorjs-style@latest"></script>
 <script src="https://cdn.jsdelivr.net/npm/@editorjs/simple-image@1.6.0/dist/simple-image.umd.min.js"></script>
-
+<script src="https://cdn.jsdelivr.net/npm/@editorjs/raw@2.5.0/dist/raw.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@calumk/editorjs-columns@latest"></script>
+<script src="https://cdn.jsdelivr.net/npm/@calumk/editorjs-paragraph-linebreakable@1.0.0/dist/editorjs-paragraph-linebreakable.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/simple-image-editorjs@latest"></script>
 
 <style>
     .codex-editor {
