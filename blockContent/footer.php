@@ -163,19 +163,7 @@
                                  inlineToolbar: true,
                              },
 
-
-
-
-                             table: {
-                                 class: Table,
-                                 inlineToolbar: true,
-                                 config: {
-                                     rows: 2,
-                                     cols: 3,
-                                 },
-                             },
-
-
+ 
                              Marker: {
                                  class: Marker,
                                  shortcut: 'CMD+SHIFT+M',
