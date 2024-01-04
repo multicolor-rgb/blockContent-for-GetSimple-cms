@@ -330,12 +330,7 @@
 
 
                      case 'header':
-                         return ` < h$ {
-                             block.data.level
-                         }
-                         style = "text-align:${block.data.alignment}" > $ {
-                             block.data.text
-                         } < /h${block.data.level}>`;
+                         return `<h${block.data.level} style="text-align:${block.data.alignment}">${block.data.text}</h${block.data.level}>`;
 
                      case 'list':
                          return `<${block.data.style === 'ordered' ? 'ol' : 'ul'}>${block.data.items.map(item => `<li>${item}</li>`).join('')}</${block.data.style === 'ordered' ? 'ol' : 'ul'}>`;
