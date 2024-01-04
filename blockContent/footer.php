@@ -212,7 +212,7 @@
                                                  const formData = new FormData();
                                                  formData.append('image', file);
 
-                                                 fetch('http://localhost/plugins/blockContent/upload/upload.php', {
+                                                 fetch('<?php global $SITEURL; echo $SITEURL;?>plugins/blockContent/upload/upload.php', {
                                                          method: 'POST',
                                                          body: formData,
                                                      })
