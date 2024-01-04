@@ -108,7 +108,7 @@
                                      const formData = new FormData();
                                      formData.append('image', file);
 
-                                     fetch('http://localhost/plugins/blockContent/upload/upload.php', {
+                                     fetch('<?php global $SITEURL; echo $SITEURL;?>/plugins/blockContent/upload/upload.php', {
                                              method: 'POST',
                                              body: formData,
                                          })
@@ -163,7 +163,19 @@
                                  inlineToolbar: true,
                              },
 
- 
+
+
+
+                             table: {
+                                 class: Table,
+                                 inlineToolbar: true,
+                                 config: {
+                                     rows: 2,
+                                     cols: 3,
+                                 },
+                             },
+
+
                              Marker: {
                                  class: Marker,
                                  shortcut: 'CMD+SHIFT+M',
