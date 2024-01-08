@@ -6,7 +6,7 @@ $thisfile = basename(__FILE__, ".php");
 register_plugin(
     $thisfile, //Plugin id
     'blockContent 🧊',     //Plugin name
-    '2.0 (Martha)',         //Plugin version
+    '3.0',         //Plugin version
     'Multicolor',  //Plugin author
     'http://www.ko-fi.com/multicolorplugins', //author website
     'New editor wysywig based on editor.js', //Plugin description
@@ -26,5 +26,7 @@ function script_editor()
 
 function footer_editor()
 {
-    include(GSPLUGINPATH . '/blockContent/footer.php');
+    global $SITEURL;
+    echo '<script>const uploadurl = "' . $SITEURL . 'plugins/blockContent/upload/upload.php"</script>
+    <script src="' . $SITEURL . 'plugins/blockContent/js/scriptBlockColumn.js"></script>';
 }
