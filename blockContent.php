@@ -6,7 +6,7 @@ $thisfile = basename(__FILE__, ".php");
 register_plugin(
     $thisfile, //Plugin id
     'blockContent 🧊',     //Plugin name
-    '3.0',         //Plugin version
+    '4.0',         //Plugin version
     'Multicolor',  //Plugin author
     'http://www.ko-fi.com/multicolorplugins', //author website
     'New editor wysywig based on editor.js', //Plugin description
