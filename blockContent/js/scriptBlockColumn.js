@@ -624,7 +624,7 @@ if (null !== document.querySelector("#edit")) {
                                     else if ("header" == e.type) a += `<h${e.data.level ?? 3} style="${e.data.alignment ? `text-align:${e.data.alignment}` : ``}">${e.data.text}</h${e.data.level ?? 3}>`;
                                     else if ("list" == e.type) a += `<${"ordered" === e.data.style ? "ol" : "ul"}>${e.data.items.map((e) => `<li>${e}</li>`).join("")}</${"ordered" === e.data.style ? "ol" : "ul"}>`;
                                     else if ("image" == e.type) {
-                                        let t = [e.data.file.stretched ? "stretched" : "", e.data.file.withBackground ? "with-background" : "", e.data.file.withBorder ? "with-border" : ""].filter(Boolean).join(" ");
+                            let t = [e.data.stretched == true ? "stretched" : "", e.data.withBackground == true ? "with-background" : "", e.data.withBorder == true ? "with-border" : ""].filter(Boolean).join(" ");
                                         a += `<img src="${e.data.file.url}"  alt="${e.data.file.caption || ""}" class="${t}" >`;
                                     } else
                                         "table" == e.type ?
@@ -639,7 +639,7 @@ if (null !== document.querySelector("#edit")) {
                                     else if ("header" == e.type) a += `<h${e.data.level ?? 3} style="${e.data.alignment ? `text-align:${e.data.alignment}` : ``}">${e.data.text}</h${e.data.level ?? 3}>`;
                                     else if ("list" == e.type) a += `<${"ordered" === e.data.style ? "ol" : "ul"}>${e.data.items.map((e) => `<li>${e}</li>`).join("")}</${"ordered" === e.data.style ? "ol" : "ul"}>`;
                                     else if ("image" == e.type) {
-                                        let t = [e.data.file.stretched ? "stretched" : "", e.data.file.withBackground ? "with-background" : "", e.data.file.withBorder ? "with-border" : ""].filter(Boolean).join(" ");
+                                        let t = [e.data.stretched == true ? "stretched" : "", e.data.withBackground == true ? "with-background" : "", e.data.withBorder == true ? "with-border" : ""].filter(Boolean).join(" ");
                                         a += `<img src="${e.data.file.url}"  alt="${e.data.file.caption || ""}" class="${t}" >`;
                                     } else
                                         "table" == e.type ?
@@ -661,7 +661,7 @@ if (null !== document.querySelector("#edit")) {
                                     else if ("header" == e.type) ac += `<h${e.data.level ?? 3} style="${e.data.alignment ? `text-align:${e.data.alignment}` : ``}">${e.data.text}</h${e.data.level ?? 3}>`;
                                     else if ("list" == e.type) ac += `<${"ordered" === e.data.style ? "ol" : "ul"}>${e.data.items.map((e) => `<li>${e}</li>`).join("")}</${"ordered" === e.data.style ? "ol" : "ul"}>`;
                                     else if ("image" == e.type) {
-                                        let t = [e.data.file.stretched ? "stretched" : "", e.data.file.withBackground ? "with-background" : "", e.data.file.withBorder ? "with-border" : ""].filter(Boolean).join(" ");
+                                        let t = [e.data.stretched == true ? "stretched" : "", e.data.withBackground == true ? "with-background" : "", e.data.withBorder == true ? "with-border" : ""].filter(Boolean).join(" ");
                                         ac += `<img src="${e.data.file.url}"  alt="${e.data.file.caption || ""}" class="${t}" >`;
                                     } else
                                         "table" == e.type ?
@@ -676,7 +676,7 @@ if (null !== document.querySelector("#edit")) {
                                     else if ("header" == e.type) ac += `<h${e.data.level ?? 3} style="${e.data.alignment ? `text-align:${e.data.alignment}` : ``}">${e.data.text}</h${e.data.level ?? 3}>`;
                                     else if ("list" == e.type) ac += `<${"ordered" === e.data.style ? "ol" : "ul"}>${e.data.items.map((e) => `<li>${e}</li>`).join("")}</${"ordered" === e.data.style ? "ol" : "ul"}>`;
                                     else if ("image" == e.type) {
-                                        let t = [e.data.stretched ? "stretched" : "", e.data.withBackground ? "with-background" : "", e.data.withBorder ? "with-border" : ""].filter(Boolean).join(" ");
+                                        let t = [e.data.stretched == true ? "stretched" : "", e.data.withBackground == true ? "with-background" : "", e.data.withBorder == true ? "with-border" : ""].filter(Boolean).join(" ");
                                         ac += `<img src="${e.data.file.url}"  alt="${e.data.file.caption || ""}" class="${t}" >`;
                                     } else
                                         "table" == e.type ?
@@ -697,7 +697,7 @@ if (null !== document.querySelector("#edit")) {
                                     else if ("header" == e.type) l += `<h${e.data.level ?? 3} style="${e.data.alignment ? `text-align:${e.data.alignment}` : ``}">${e.data.text}</h${e.data.level ?? 3}>`;
                                     else if ("list" == e.type) l += `<${"ordered" === e.data.style ? "ol" : "ul"}>${e.data.items.map((e) => `<li>${e}</li>`).join("")}</${"ordered" === e.data.style ? "ol" : "ul"}>`;
                                     else if ("image" == e.type) {
-                                        let t = [e.data.stretched ? "stretched" : "", e.data.withBackground ? "with-background" : "", e.data.withBorder ? "with-border" : ""].filter(Boolean).join(" ");
+                                        let t = [e.data.stretched == true ? "stretched" : "", e.data.withBackground == true ? "with-background" : "", e.data.withBorder == true ? "with-border" : ""].filter(Boolean).join(" ");
                                         l += `<img src="${e.data.file.url}"  alt="${e.data.file.caption || ""}" class="${t}" >`;
                                     } else
                                         "table" == e.type ?
@@ -712,7 +712,7 @@ if (null !== document.querySelector("#edit")) {
                                     else if ("header" == e.type) l += `<h${e.data.level ?? 3} style="${e.data.alignment ? `text-align:${e.data.alignment}` : ``}">${e.data.text}</h${e.data.level ?? 3}>`;
                                     else if ("list" == e.type) l += `<${"ordered" === e.data.style ? "ol" : "ul"}>${e.data.items.map((e) => `<li>${e}</li>`).join("")}</${"ordered" === e.data.style ? "ol" : "ul"}>`;
                                     else if ("image" == e.type) {
-                                        let t = [e.data.stretched ? "stretched" : "", e.data.withBackground ? "with-background" : "", e.data.withBorder ? "with-border" : ""].filter(Boolean).join(" ");
+                                        let t = [e.data.stretched == true ? "stretched" : "", e.data.withBackground == true ? "with-background" : "", e.data.withBorder == true ? "with-border" : ""].filter(Boolean).join(" ");
                                         l += `<img src="${e.data.file.url}"  alt="${e.data.file.caption || ""}" class="${t}" >`;
                                     } else
                                         "table" == e.type ?
@@ -727,7 +727,7 @@ if (null !== document.querySelector("#edit")) {
                                     else if ("header" == e.type) l += `<h${e.data.level ?? 3} style="${e.data.alignment ? `text-align:${e.data.alignment}` : ``}">${e.data.text}</h${e.data.level ?? 3}>`;
                                     else if ("list" == e.type) l += `<${"ordered" === e.data.style ? "ol" : "ul"}>${e.data.items.map((e) => `<li>${e}</li>`).join("")}</${"ordered" === e.data.style ? "ol" : "ul"}>`;
                                     else if ("image" == e.type) {
-                                        let t = [e.data.stretched ? "stretched" : "", e.data.withBackground ? "with-background" : "", e.data.withBorder ? "with-border" : ""].filter(Boolean).join(" ");
+                                        let t = [e.data.stretched == true ? "stretched" : "", e.data.withBackground == true ? "with-background" : "", e.data.withBorder == true ? "with-border" : ""].filter(Boolean).join(" ");
                                         l += `<img src="${e.data.file.url}"  alt="${e.data.file.caption || ""}" class="${t}" >`;
                                     } else
                                         "table" == e.type ?
@@ -747,7 +747,7 @@ if (null !== document.querySelector("#edit")) {
                                     else if ("header" == e.type) i += `<h${e.data.level ?? 3} style="${e.data.alignment ? `text-align:${e.data.alignment}` : ``}">${e.data.text}</h${e.data.level ?? 3}>`;
                                     else if ("list" == e.type) i += `<${"ordered" === e.data.style ? "ol" : "ul"}>${e.data.items.map((e) => `<li>${e}</li>`).join("")}</${"ordered" === e.data.style ? "ol" : "ul"}>`;
                                     else if ("image" == e.type) {
-                                        let t = [e.data.stretched ? "stretched" : "", e.data.withBackground ? "with-background" : "", e.data.withBorder ? "with-border" : ""].filter(Boolean).join(" ");
+                                        let t = [e.data.stretched == true ? "stretched" : "", e.data.withBackground == true ? "with-background" : "", e.data.withBorder == true ? "with-border" : ""].filter(Boolean).join(" ");
                                         i += `<img src="${e.data.file.url}"  alt="${e.data.file.caption || ""}" class="${t}" >`;
                                     } else
                                         "table" == e.type ?
@@ -762,7 +762,7 @@ if (null !== document.querySelector("#edit")) {
                                     else if ("header" == e.type) i += `<h${e.data.level ?? 3} style="${e.data.alignment ? `text-align:${e.data.alignment}` : ``}">${e.data.text}</h${e.data.level ?? 3}>`;
                                     else if ("list" == e.type) i += `<${"ordered" === e.data.style ? "ol" : "ul"}>${e.data.items.map((e) => `<li>${e}</li>`).join("")}</${"ordered" === e.data.style ? "ol" : "ul"}>`;
                                     else if ("image" == e.type) {
-                                        let t = [e.data.stretched ? "stretched" : "", e.data.withBackground ? "with-background" : "", e.withBorder ? "with-border" : ""].filter(Boolean).join(" ");
+                                        let t = [e.data.stretched == true ? "stretched" : "", e.data.withBackground == true ? "with-background" : "", e.data.withBorder == true ? "with-border" : ""].filter(Boolean).join(" ");
                                         i += `<img src="${e.data.file.url}"  alt="${e.data.file.caption || ""}" class="${t}" >`;
                                     } else
                                         "table" == e.type ?
@@ -782,7 +782,7 @@ if (null !== document.querySelector("#edit")) {
                                     else if ("header" == e.type) r += `<h${e.data.level ?? 3} style="${e.data.alignment ? `text-align:${e.data.alignment}` : ``}">${e.data.text}</h${e.data.level ?? 3}>`;
                                     else if ("list" == e.type) r += `<${"ordered" === e.data.style ? "ol" : "ul"}>${e.data.items.map((e) => `<li>${e}</li>`).join("")}</${"ordered" === e.data.style ? "ol" : "ul"}>`;
                                     else if ("image" == e.type) {
-                                        let t = [e.data.stretched ? "stretched" : "", e.data.withBackground ? "with-background" : "", e.data.withBorder ? "with-border" : ""].filter(Boolean).join(" ");
+                                        let t = [e.data.stretched == true ? "stretched" : "", e.data.withBackground == true ? "with-background" : "", e.data.withBorder == true ? "with-border" : ""].filter(Boolean).join(" ");
                                         r += `<img src="${e.data.file.url}"  alt="${e.data.file.caption || ""}" class="${t}" >`;
                                     } else
                                         "table" == e.type ?
@@ -797,7 +797,7 @@ if (null !== document.querySelector("#edit")) {
                                     else if ("header" == e.type) r += `<h${e.data.level ?? 3} style="${e.data.alignment ? `text-align:${e.data.alignment}` : ``}">${e.data.text}</h${e.data.level ?? 3}>`;
                                     else if ("list" == e.type) r += `<${"ordered" === e.data.style ? "ol" : "ul"}>${e.data.items.map((e) => `<li>${e}</li>`).join("")}</${"ordered" === e.data.style ? "ol" : "ul"}>`;
                                     else if ("image" == e.type) {
-                                        let t = [e.data.stretched ? "stretched" : "", e.data.withBackground ? "with-background" : "", e.data.withBorder ? "with-border" : ""].filter(Boolean).join(" ");
+                                        let t = [e.data.stretched == true ? "stretched" : "", e.data.withBackground == true ? "with-background" : "", e.data.withBorder == true ? "with-border" : ""].filter(Boolean).join(" ");
                                         r += `<img src="${e.data.file.url}"  alt="${e.data.file.caption || ""}" class="${t}" >`;
                                     } else
                                         "table" == e.type ?
